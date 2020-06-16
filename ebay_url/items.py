@@ -11,4 +11,9 @@ import scrapy
 class EbayUrlItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+
+    name = scrapy.Field()
+    print_date = scrapy.Field()
+    item_specifics = scrapy.Field()
+    price = scrapy.field()
+    image = scrapy.Field()
