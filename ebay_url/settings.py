@@ -14,6 +14,7 @@ BOT_NAME = 'ebay_url'
 SPIDER_MODULES = ['ebay_url.spiders']
 NEWSPIDER_MODULE = 'ebay_url.spiders'
 
+LOG_LEVEL = 'CRITICAL'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'ebay_url (+http://www.yourdomain.com)'
