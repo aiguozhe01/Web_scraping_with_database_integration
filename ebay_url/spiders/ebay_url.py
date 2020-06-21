@@ -1,5 +1,6 @@
 import scrapy
 
+from ebay_url.items import EbayUrlItem
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 
@@ -22,12 +23,24 @@ class EbayUrlSpider(CrawlSpider):
 
     def parse_httpresponse(self, response):
 
+        print(response.url)
+
+        item = EbayUrlItem()
+
         # Check if the link goes to a pdf
+
+        if 'Content-Type' in response.headers.keys():
+            links_to_creeper = 'application/pdf' in str(response.headers['Content-Type'])
+        else:
+            return None
+
+        ## Now find out how to search "MineCraft Creeper" under ebay
+
 
         # If it does, scrape it
 
         # If not, ignore it and move on to the next link
 
-        # Write that dat to the csv
+        # Write that data to the csv
 
         return

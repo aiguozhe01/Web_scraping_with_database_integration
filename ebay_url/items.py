@@ -15,5 +15,5 @@ class EbayUrlItem(scrapy.Item):
     name = scrapy.Field()
     print_date = scrapy.Field()
     item_specifics = scrapy.Field()
-    price = scrapy.field()
+    price = scrapy.Field()
     image = scrapy.Field()
